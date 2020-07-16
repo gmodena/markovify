@@ -140,7 +140,7 @@ class Chain(object):
         """
         Dump the model as a JSON object, for loading later.
         """
-        return json.dumps(list(self.model.items()))
+        return json.dumps(list(self.model.items()), ensure_ascii=False)
 
     @classmethod
     def from_json(cls, json_thing):
