@@ -83,7 +83,7 @@ class Text(object):
         """
         Returns the underlying data as a JSON string.
         """
-        return json.dumps(self.to_dict())
+        return json.dumps(self.to_dict(), ensure_ascii=False)
 
     @classmethod
     def from_dict(cls, obj, **kwargs):
